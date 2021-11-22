@@ -1,0 +1,81 @@
+:root {
+  --white-color: #fff;
+  --black-color: #000;
+  --text-color: #333;
+  --primary-color: #4a5f88;
+  --hover-color: #dee1e5;
+  --btn-primary-color-hover: rgba(77, 96, 134, 0.9);
+  --btn-gold-color: #cfb20c;
+  --btn-orange-color: #d85922;
+  --btn-orange-color-hover: rgba(228, 93, 35, 0.9);
+  --header-height: 72px;
+  --navbar-height: 32px;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+
+/* Button style */
+.btn {
+  min-width: 124px;
+  height: 34px;
+  font-size: 1.5rem;
+  line-height: 1.6rem;
+  text-decoration: none;
+  border-radius: 2px;
+  border: none;
+  outline: none;
+  padding: 0 12px;
+  cursor: pointer;
+  color: var(--white-color);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn.btn-has-hover:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.btn.btn-size-s {
+  height: 32px;
+  font-size: 1.2rem;
+  padding: 0 8px;
+}
+
+.btn.btn-primary {
+  color: var(--white-color);
+  background-color: var(--primary-color);
+}
+
+.btn.btn-buy {
+  color: var(--white-color);
+  background-color: var(--primary-color);
+}
+.btn.btn-cart {
+  color: var(--white-color);
+  background-color: var(--btn-orange-color);
+}
+
+.btn.btn-disable {
+  cursor: none;
+  color: #949494;
+  background-color: #c3c3c3;
+}
+
+.btn-disable:hover {
+  color: var(--white-color);
+}
+
+.close {
+  background: none;
+  border: none;
+  font-size: 3rem;
+}

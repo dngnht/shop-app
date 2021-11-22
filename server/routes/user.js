@@ -1,0 +1,11 @@
+const express = require("express");
+const router = express.Router();
+const authJwt = require("../middlewares/authJwt");
+const userController = require("../controllers/UserController");
+router.put("/addToCart", authJwt.verifyToken, userController.addToCart);
+router.post("/delFromCart", authJwt.verifyToken, userController.delFromCart);
+router.post("/addCredit", authJwt.verifyToken, userController.addCredit);
+router.post("/checkCredit", authJwt.verifyToken, userController.checkCredit);
+router.post("/addPayment", authJwt.verifyToken, userController.addPayment);
+router.post("/clearCart", authJwt.verifyToken, userController.clearCart);
+module.exports = router;

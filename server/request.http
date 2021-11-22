@@ -1,0 +1,62 @@
+POST http://localhost:3000/api/auth/signup
+Content-Type: application/json
+
+{
+    "name": "Admin",
+    "password": "admin123",
+    "email": "admin@gmail.com",
+    "role": "admin"
+}
+
+###
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+    "email": "admin@gmail.com",
+    "password": "admin123"
+}
+###
+POST http://localhost:3000/api/admin/createProduct
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGVmOTY2NWVhNmY2MDBlNjQ5NzFmNTMiLCJpYXQiOjE2MjY4NDMxNzd9.NbEcyRXdnpVNhjLLkmEiOcgD7iSazv2QPk9MwwDdjNY
+
+{
+    "name": "ワイヤレスキーボード K295GP",
+    "image": "https://m.media-amazon.com/images/I/61TdCBBTuhL._AC_SL1500_.jpg",
+    "category": "equipment",
+    "price": "2673",    
+    "description": "ロジクール ワイヤレスキーボード K295GP 静音 防水 キーボード 無線 Unifying K295 windows chrome グラファイト 国内正規品"
+}
+###
+GET  http://localhost:3000/api/home
+
+###
+POST http://localhost:3000/api/auth/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGU2NjQxZWFlNTQzNTE0NzQzYzBhMWUiLCJpYXQiOjE2MjU3MTIxMzh9.71xxszAwb1e5UG7L2IWfPRQU0THb9Pt7TS5vCBkLy9s
+
+###
+POST http://localhost:3000/api/cart
+Content-Type: application/json
+
+{
+    "cartId" : "60ec58c6578b462a586a1d17"
+}
+
+### Add product to cart
+PUT http://localhost:3000/api/user/addToCart
+Content-Type: application/json
+
+{
+    "cartId": "60ec58c6578b462a586a1d17",
+    "productId": "60ceb85f90c1e80cae58bfa4"
+}
+### Del product to cart
+POST  http://localhost:3000/api/user/delFromCart
+Content-Type: application/json
+
+{
+    "cartId": "60ec58c6578b462a586a1d17",
+"productId": "60ceb85f90c1e80cae58bfa4"
+}
